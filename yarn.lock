@@ -354,9 +354,9 @@ arrify@^1.0.0, arrify@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/arrify/-/arrify-1.0.1.tgz#898508da2226f380df904728456849c1501a4b0d"
 
-ascjs@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/ascjs/-/ascjs-2.4.0.tgz#f1657912bdf7a3d53947d7d567fcfda528133811"
+ascjs@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/ascjs/-/ascjs-3.0.0.tgz#dca56f9950d499852c023831dff8615c02ba6b51"
   dependencies:
     babylon "^6.18.0"
 
