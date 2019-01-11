@@ -21,7 +21,7 @@
     "mentions-regex": "^2.0.3"
   },
   "devDependencies": {
-    "ascjs": "^2.4.0",
+    "ascjs": "^3.0.0",
     "asia": "^0.19.6",
     "esm": "^3.0.72",
     "gitcommit": "^1.0.8",
