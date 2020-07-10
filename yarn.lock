@@ -140,6 +140,11 @@
   version "7.7.7"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.7.7.tgz#1b886595419cf92d811316d5b715a53ff38b4937"
 
+"@babel/parser@^7.9.6":
+  version "7.10.4"
+  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.10.4.tgz#9eedf27e1998d87739fb5028a5120557c06a1a64"
+  integrity sha512-8jHII4hf+YVDsskTF6WuMB3X4Eh+PsUkC2ljq22so5rHvH+T8BzyL94VOdyFLNR8tBSVXOTbNHOKpR4TfRxVtA==
+
 "@babel/template@7.0.0-beta.44":
   version "7.0.0-beta.44"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.0.0-beta.44.tgz#f8832f4fdcee5d59bf515e595fc5106c529b394f"
@@ -407,11 +412,12 @@ arrify@^1.0.0, arrify@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/arrify/-/arrify-1.0.1.tgz#898508da2226f380df904728456849c1501a4b0d"
 
-ascjs@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/ascjs/-/ascjs-3.0.0.tgz#dca56f9950d499852c023831dff8615c02ba6b51"
+ascjs@^4.0.0:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/ascjs/-/ascjs-4.0.1.tgz#0e1b12a28ca729efda7f75d891b7ee3f440173ca"
+  integrity sha512-E/JuvSEe3EfuCZ52Ff142b8lwmuCrSCR+FaDPryIL2svqCiWmDCbzFCcOB+dfFeD2QHMS7zzQ+rWFw73ZUoZjA==
   dependencies:
-    babylon "^6.18.0"
+    "@babel/parser" "^7.9.6"
 
 asia@^0.19.6:
   version "0.19.6"
@@ -483,10 +489,6 @@ babel-eslint@^8.2.5:
 babylon@7.0.0-beta.44:
   version "7.0.0-beta.44"
   resolved "https://registry.yarnpkg.com/babylon/-/babylon-7.0.0-beta.44.tgz#89159e15e6e30c5096e22d738d8c0af8a0e8ca1d"
-
-babylon@^6.18.0:
-  version "6.18.0"
-  resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.18.0.tgz#af2f3b88fa6f5c1e4c634d1a0f8eac4f55b395e3"
 
 balanced-match@^1.0.0:
   version "1.0.0"
