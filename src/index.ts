@@ -5,6 +5,12 @@
 
 import mentionsRegex from 'mentions-regex';
 
+export type Result = {
+  handle: string;
+  mention: string;
+  index: number;
+};
+
 /**
  * > Collect all mentions from string. Returns array of objects
  * with properties `{ handle, mention, index }`.
@@ -33,11 +39,10 @@ import mentionsRegex from 'mentions-regex';
  * @returns {Array} array of objects
  * @api public
  */
-
-export default function getMentions(str, dot) {
-  const result = [];
+export default function getMentions(str: string, dot: boolean): Result[] {
+  const result: any = [];
   const regex = new RegExp(mentionsRegex(dot), 'g');
-  let m = null;
+  let m: any = null;
 
   /* eslint-disable no-cond-assign */
   while ((m = regex.exec(str))) {

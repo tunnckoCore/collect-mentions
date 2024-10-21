@@ -4,6 +4,8 @@ coverage
 .eslintcache
 dist
 collect-mentions
+.cache
+.circleci
 
 # npm >=5 lock file (& shrinkwrap), we use Yarn!
 package-lock.json

@@ -1,73 +1,62 @@
 {
   "name": "collect-mentions",
-  "description": "Collect mentions from a given text string, using battle-tested `mentions-regex` package",
-  "license": "Apache-2.0",
+  "version": "2.0.0",
   "licenseStart": "2017",
-  "scripts": {
-    "lint": "xaxa",
-    "test": "nyc --require esm asia",
-    "gitadd": "git status --porcelain && git add -A",
-    "commit-dry": "yarn gitadd && yarn commit",
-    "precommit": "yarn lint && yarn test && yarn gitadd",
-    "commit": "gitcommit -sS",
-    "prebuild": "rm -rf dist && mkdir dist",
-    "build": "ascjs src dist",
-    "prepublishOnly": "yarn build"
+  "license": "Apache-2.0",
+  "description": "Collect mentions from a given text string, using battle-tested `mentions-regex` package",
+  "author": "wgw <dev@wgw.lol>",
+  "homepage": "https://github.com/tunnckocore/collect-mentions",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tunnckocore/collect-mentions.git"
   },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
   "engines": {
-    "node": "^6.9.0 || ^8.9.0 || ^10.6.0"
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org",
+    "tag": "latest"
+  },
+  "scripts": {
+    "prebuild": "rm -rf dist && mkdir dist",
+    "build": "tsup",
+    "fmt": "bunx prettier . -w",
+    "gitadd": "git status --porcelain && git add -A",
+    "lint": "bunx eslint@^8 '**/*.{js,mjs,ts}' --fix",
+    "prepublishOnly": "bun run build",
+    "test": "bun test"
   },
   "dependencies": {
     "mentions-regex": "^2.0.3"
   },
   "devDependencies": {
-    "ascjs": "^4.0.0",
-    "asia": "^0.19.6",
-    "esm": "^3.0.72",
-    "gitcommit": "^1.0.8",
-    "new-release": "^5.0.0",
-    "nyc": "^15.0.0",
-    "xaxa": "^2.0.0"
+    "eslint-config-tunnckocore": "^8.2.2",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.3"
   },
-  "files": [
-    "src",
-    "dist"
+  "keywords": [
+    "collect",
+    "mentions",
+    "collection",
+    "handles",
+    "collect mentions"
   ],
-  "main": "dist/index.js",
-  "module": "src/index.js",
-  "version": "0.0.0-semantically-released",
-  "repository": "olstenlarck/collect-mentions",
-  "homepage": "https://github.com/olstenlarck/collect-mentions",
-  "author": "Charlike Mike Reagent (https://i.am.charlike.online)",
-  "publishConfig": {
-    "access": "public"
-  },
-  "eslintConfig": {
-    "extends": "xaxa"
-  },
-  "renovate": {
-    "extends": "tunnckocore"
-  },
-  "nyc": {
-    "statements": 100,
-    "functions": 100,
-    "branches": 100,
-    "lines": 100,
-    "cache": true,
-    "check-coverage": true,
-    "reporter": [
-      "lcov",
-      "text"
-    ],
-    "exclude": [
-      "test"
-    ],
-    "extension": [
-      ".js",
-      ".jsx",
-      ".mjs"
-    ]
-  },
+  "contributors": [
+    "Charlike Mike Reagent <opensource@tunnckocore.com>"
+  ],
   "verb": {
     "run": true,
     "toc": {
