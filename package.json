@@ -1,6 +1,6 @@
 {
   "name": "collect-mentions",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "licenseStart": "2017",
   "license": "Apache-2.0",
   "description": "Collect mentions from a given text string, using battle-tested `mentions-regex` package",
